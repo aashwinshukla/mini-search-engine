@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Machine Learning",
+    "url": "https://example.com/tech/intro-to-ml",
+    "type": "article",
+    "content": "Machine learning is a subset of artificial intelligence that enables systems to learn and improve from experience without being explicitly programmed. It focuses on developing computer programs that can access data and use it to learn for themselves. Common algorithms include linear regression, decision trees, neural networks, and support vector machines."
+  },
+  {
+    "id": 2,
+    "title": "Python Programming for Beginners",
+    "url": "https://example.com/tutorials/python-beginners",
+    "type": "tutorial",
+    "content": "Python is a high-level, interpreted programming language known for its simplicity and readability. It supports multiple programming paradigms including procedural, object-oriented, and functional programming. Python is widely used in web development, data science, automation, and artificial intelligence."
+  },
+  {
+    "id": 3,
+    "title": "How to Make Pasta Carbonara",
+    "url": "https://example.com/recipes/pasta-carbonara",
+    "type": "recipe",
+    "content": "Pasta carbonara is a classic Italian dish made with eggs, hard cheese, cured pork, and black pepper. Cook spaghetti until al dente. Fry guanciale or pancetta until crispy. Mix eggs with pecorino romano cheese. Combine pasta with pork, remove from heat, then stir in egg mixture. Season with black pepper and serve immediately."
+  },
+  {
+    "id": 4,
+    "title": "Best Budget Smartphones of 2024",
+    "url": "https://example.com/reviews/budget-smartphones-2024",
+    "type": "review",
+    "content": "Budget smartphones have come a long way in recent years. The top picks include devices from Samsung, Xiaomi, and Motorola offering impressive cameras, long battery life, and solid performance at under $300. Key features to look for include AMOLED displays, fast charging support, and at least 4GB of RAM."
+  },
+  {
+    "id": 5,
+    "title": "Climate Change: Causes and Effects",
+    "url": "https://example.com/science/climate-change",
+    "type": "article",
+    "content": "Climate change refers to long-term shifts in global temperatures and weather patterns. While some changes are natural, human activities since the industrial revolution have been the main driver. Burning fossil fuels releases greenhouse gases like carbon dioxide and methane, trapping heat in the atmosphere and causing global warming, rising sea levels, and extreme weather events."
+  },
+  {
+    "id": 6,
+    "title": "Beginner's Guide to Yoga",
+    "url": "https://example.com/health/yoga-beginners-guide",
+    "type": "guide",
+    "content": "Yoga is an ancient practice combining physical postures, breathing exercises, and meditation. For beginners, start with foundational poses like mountain pose, downward dog, and child's pose. Practice consistently for at least 20 minutes a day. Yoga improves flexibility, builds strength, reduces stress, and promotes mental clarity."
+  },
+  {
+    "id": 7,
+    "title": "JavaScript Promises and Async/Await Explained",
+    "url": "https://example.com/tutorials/js-async-await",
+    "type": "tutorial",
+    "content": "Asynchronous JavaScript allows code to run without blocking the main thread. Promises represent a value that may be available now, in the future, or never. Async/await is syntactic sugar built on top of promises, making asynchronous code look and behave more like synchronous code. Use try/catch blocks to handle errors in async functions."
+  },
+  {
+    "id": 8,
+    "title": "History of the Roman Empire",
+    "url": "https://example.com/history/roman-empire",
+    "type": "article",
+    "content": "The Roman Empire was one of the largest empires in ancient history, at its peak covering territories from Britain to Egypt. Founded in 27 BC when Augustus became the first emperor, it lasted until 476 AD in the west. The Romans made significant contributions to law, governance, architecture, language, and engineering including roads, aqueducts, and the Colosseum."
+  },
+  {
+    "id": 9,
+    "title": "10 Tips for Better Sleep",
+    "url": "https://example.com/health/sleep-tips",
+    "type": "listicle",
+    "content": "Getting quality sleep is essential for physical and mental health. Keep a consistent sleep schedule, avoid screens an hour before bed, keep your bedroom cool and dark, limit caffeine after noon, exercise regularly but not too close to bedtime, avoid large meals late at night, manage stress through meditation or journaling, and avoid alcohol before sleeping."
+  },
+  {
+    "id": 10,
+    "title": "How Does the Stock Market Work",
+    "url": "https://example.com/finance/stock-market-explained",
+    "type": "article",
+    "content": "The stock market is a marketplace where buyers and sellers trade shares of publicly listed companies. Stock prices fluctuate based on supply and demand, company performance, and macroeconomic factors. Major indices like the S&P 500, Dow Jones, and NASDAQ track the overall performance of the market. Investors can earn returns through capital gains and dividends."
+  },
+  {
+    "id": 11,
+    "title": "Getting Started with Docker",
+    "url": "https://example.com/devops/docker-getting-started",
+    "type": "tutorial",
+    "content": "Docker is a platform for developing, shipping, and running applications inside containers. Containers package code and its dependencies together so the application runs reliably across different environments. Key concepts include images, containers, Dockerfiles, and Docker Compose. Use docker build to create an image and docker run to start a container."
+  },
+  {
+    "id": 12,
+    "title": "The Solar System: Planets and Beyond",
+    "url": "https://example.com/science/solar-system",
+    "type": "article",
+    "content": "Our solar system consists of the Sun and everything gravitationally bound to it, including eight planets, dwarf planets, moons, asteroids, and comets. The inner rocky planets are Mercury, Venus, Earth, and Mars. The outer gas giants are Jupiter, Saturn, Uranus, and Neptune. The solar system is located in the Milky Way galaxy, about 26,000 light-years from the galactic center."
+  },
+  {
+    "id": 13,
+    "title": "Best Practices for REST API Design",
+    "url": "https://example.com/tech/rest-api-best-practices",
+    "type": "guide",
+    "content": "A well-designed REST API uses meaningful resource URLs, correct HTTP methods (GET, POST, PUT, DELETE), and appropriate status codes. Always version your API, use pagination for large datasets, return consistent JSON responses, and implement proper authentication using OAuth or JWT tokens. Document your API thoroughly using tools like Swagger or OpenAPI."
+  },
+  {
+    "id": 14,
+    "title": "Top 10 Travel Destinations in Europe",
+    "url": "https://example.com/travel/europe-top-destinations",
+    "type": "listicle",
+    "content": "Europe offers a rich mix of history, culture, and natural beauty. Top destinations include Paris for its art and cuisine, Rome for its ancient ruins, Barcelona for its architecture and beaches, Amsterdam for its canals and museums, Prague for its medieval old town, and Santorini for its stunning views. Each city offers unique experiences for every type of traveler."
+  },
+  {
+    "id": 15,
+    "title": "Understanding Neural Networks",
+    "url": "https://example.com/tech/neural-networks-explained",
+    "type": "article",
+    "content": "Neural networks are computing systems loosely modeled on the human brain. They consist of layers of interconnected nodes or neurons that process information using connectionist approaches. A typical network has an input layer, one or more hidden layers, and an output layer. Training involves adjusting weights through backpropagation to minimize prediction error."
+  }
+]

@@ -1,12 +1,12 @@
 import re
-from collection import Counter
+from collections import Counter
 import string
 from bs4 import BeautifulSoup
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
-from nltk.stem import WordNetLemmatier
+from nltk.stem import WordNetLemmatizer
 import contractions
 import emoji
 from spellchecker import SpellChecker
@@ -33,5 +33,7 @@ while running:
     user_input = []
     user_input = input("Enter whatever you want to search from our database: ")
 
-    cleaned_user_input = 
+    cleaned_user_input = [clean_text(doc) for doc in user_input ]
+    print(f"Cleaned Input : {cleaned_user_input}")
+
 
