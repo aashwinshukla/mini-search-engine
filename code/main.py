@@ -32,7 +32,7 @@ def get_wordnet_pos(treebank_tag):
         return wordnet.NOUN
 
 
-def preprocess(text):
+def preprocess(text, spell_correct=False):
     # 1. Expand contractions (don't -> do not, I'm -> I am)
     text = contractions.fix(text)
 
@@ -59,14 +59,16 @@ def preprocess(text):
     # 8. Tokenize
     tokens = word_tokenize(text)
 
-    spell = SpellChecker()
-    tokens = [spell.correction(word) or word for word in tokens]
+    # 9. Spell correction (user input only, not corpus)
+    if spell_correct:
+        spell = SpellChecker()
+        tokens = [spell.correction(word) or word for word in tokens]
 
-    # 9. Remove stopwords
+    # 10. Remove stopwords
     stop_words = set(stopwords.words('english'))
     tokens = [word for word in tokens if word not in stop_words]
 
-    # 10. POS tag + Lemmatize
+    # 11. POS tag + Lemmatize
     lemmatizer = WordNetLemmatizer()
     pos_tags = pos_tag(tokens)
     tokens = [lemmatizer.lemmatize(word, get_wordnet_pos(tag)) for word, tag in pos_tags]
@@ -76,11 +78,15 @@ def preprocess(text):
 with open('catalog.json', 'r') as file:
     corpus = json.load(file)
 
+# Preprocess all corpus documents once upfront
+for doc in corpus:
+    doc['tokens'] = preprocess(doc['title'] + ' ' + doc['content'])
+
 while True:
     print("==========Welcome user to our Mini Search Engine==========")
 
     user_input = input("Enter whatever you want to search from our database: ")
 
-    processed_tokens = preprocess(user_input)
+    processed_tokens = preprocess(user_input, spell_correct=True)
     print("Processed query tokens:", processed_tokens)
     break
