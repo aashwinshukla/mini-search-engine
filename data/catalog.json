@@ -103,5 +103,75 @@
     "url": "https://example.com/tech/neural-networks-explained",
     "type": "article",
     "content": "Neural networks are computing systems loosely modeled on the human brain. They consist of layers of interconnected nodes or neurons that process information using connectionist approaches. A typical network has an input layer, one or more hidden layers, and an output layer. Training involves adjusting weights through backpropagation to minimize prediction error."
+  },
+  {
+    "id": 16,
+    "title": "How to Brew the Perfect Cup of Coffee",
+    "url": "https://example.com/food/brew-perfect-coffee",
+    "type": "guide",
+    "content": "Great coffee starts with freshly ground beans. Use a ratio of 1 to 2 tablespoons of coffee per 6 ounces of water. Water temperature should be just off the boil, around 90 to 96 degrees Celsius. Pour-over, French press, and espresso each produce different flavor profiles. Store beans in an airtight container away from light and heat."
+  },
+  {
+    "id": 17,
+    "title": "Basics of Personal Finance",
+    "url": "https://example.com/finance/personal-finance-basics",
+    "type": "article",
+    "content": "Managing personal finances starts with budgeting. Track your income and expenses, build an emergency fund covering three to six months of living costs, and avoid high-interest debt. Invest early to benefit from compound interest. Common investment vehicles include index funds, ETFs, and retirement accounts like a 401k or IRA."
+  },
+  {
+    "id": 18,
+    "title": "Introduction to Git and Version Control",
+    "url": "https://example.com/tutorials/git-version-control",
+    "type": "tutorial",
+    "content": "Git is a distributed version control system that tracks changes in source code. Key commands include git init to start a repository, git add to stage changes, git commit to save a snapshot, and git push to upload to a remote like GitHub. Branching allows teams to work on features in parallel without affecting the main codebase."
+  },
+  {
+    "id": 19,
+    "title": "The Psychology of Habit Formation",
+    "url": "https://example.com/psychology/habit-formation",
+    "type": "article",
+    "content": "Habits are automatic behaviors triggered by cues in our environment. The habit loop consists of a cue, a routine, and a reward. To build a new habit, stack it onto an existing one and start with a very small version of the behavior. To break a bad habit, identify the cue and replace the routine while keeping the same reward."
+  },
+  {
+    "id": 20,
+    "title": "Beginner's Guide to Weightlifting",
+    "url": "https://example.com/fitness/weightlifting-beginners",
+    "type": "guide",
+    "content": "Weightlifting builds strength and muscle by progressively overloading the muscles. Start with compound movements like squats, deadlifts, bench press, and overhead press. Focus on form before adding weight. Follow a structured program, rest each muscle group for 48 hours, and eat enough protein to support muscle repair and growth."
+  },
+  {
+    "id": 21,
+    "title": "How Blockchain Technology Works",
+    "url": "https://example.com/tech/blockchain-explained",
+    "type": "article",
+    "content": "A blockchain is a distributed ledger that records transactions across many computers so that no single record can be altered without changing all subsequent blocks. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data. Bitcoin and Ethereum are the most well-known blockchain networks."
+  },
+  {
+    "id": 22,
+    "title": "Guide to Indoor Plant Care",
+    "url": "https://example.com/home/indoor-plant-care",
+    "type": "guide",
+    "content": "Indoor plants improve air quality and add life to any space. Most houseplants need bright indirect light, well-draining soil, and watering only when the top inch of soil is dry. Common beginner plants include pothos, snake plants, and spider plants. Avoid overwatering, which is the most common cause of plant death."
+  },
+  {
+    "id": 23,
+    "title": "World War II: A Brief Overview",
+    "url": "https://example.com/history/world-war-2",
+    "type": "article",
+    "content": "World War II was a global conflict from 1939 to 1945 involving most of the world's nations. It was triggered by Germany's invasion of Poland and ended with the surrender of Germany and Japan. Key events include the Battle of Britain, the invasion of Normandy on D-Day, the Holocaust, and the atomic bombings of Hiroshima and Nagasaki."
+  },
+  {
+    "id": 24,
+    "title": "How to Write Clean Code",
+    "url": "https://example.com/tech/clean-code-principles",
+    "type": "article",
+    "content": "Clean code is readable, maintainable, and easy to understand. Use meaningful variable and function names, keep functions small and focused on a single task, avoid deep nesting, write comments that explain why not what, and follow consistent formatting. Refactor regularly and write tests to ensure your code behaves as expected."
+  },
+  {
+    "id": 25,
+    "title": "Photography Tips for Beginners",
+    "url": "https://example.com/photography/tips-for-beginners",
+    "type": "guide",
+    "content": "Good photography starts with understanding the exposure triangle: aperture, shutter speed, and ISO. Use the rule of thirds to compose interesting shots. Shoot in RAW format for maximum editing flexibility. Natural light is usually the most flattering. Practice by taking photos every day and studying the work of photographers you admire."
   }
 ]
