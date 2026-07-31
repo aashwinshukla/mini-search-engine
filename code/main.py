@@ -45,9 +45,11 @@ while True:
     filtered_user_input = [word for word in tokenized_user_input if word not in stop_words]
     print("Stopword Removed Input: ", filtered_user_input)
 
-    stemmer = PorterStemmer
+    stemmer = PorterStemmer()
     stemmed_user_input = [stemmer.stem(word) for word in filtered_user_input]
     print("Stemmed Input: ", stemmed_user_input)
+
+    
     break
 
 
