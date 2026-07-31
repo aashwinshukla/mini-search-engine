@@ -4,30 +4,76 @@ import string
 from bs4 import BeautifulSoup
 import nltk
 from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer
+from nltk.corpus import stopwords, wordnet
 from nltk.stem import WordNetLemmatizer
+from nltk import pos_tag
 import contractions
 import emoji
 from spellchecker import SpellChecker
 import json
-nltk.download('punkt')
-nltk.download('punkt_tab')
-nltk.download('stopwords')
 
-def clean_text(text):
+nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
+nltk.download('stopwords', quiet=True)
+nltk.download('wordnet', quiet=True)
+nltk.download('averaged_perceptron_tagger', quiet=True)
+nltk.download('averaged_perceptron_tagger_eng', quiet=True)
+
+
+def get_wordnet_pos(treebank_tag):
+    """Convert Penn Treebank POS tag to WordNet POS tag for accurate lemmatization."""
+    if treebank_tag.startswith('J'):
+        return wordnet.ADJ
+    elif treebank_tag.startswith('V'):
+        return wordnet.VERB
+    elif treebank_tag.startswith('R'):
+        return wordnet.ADV
+    else:
+        return wordnet.NOUN
+
+
+def preprocess(text):
+    # 1. Expand contractions (don't -> do not, I'm -> I am)
+    text = contractions.fix(text)
+
+    # 2. Lowercase
     text = text.lower()
+
+    text = emoji.demojize(text)
+
+    # 3. Strip HTML tags
     text = BeautifulSoup(text, "html.parser").get_text()
+
+    # 4. Remove URLs
     text = re.sub(r'http\S+|www\S+', '', text)
+
+    # 5. Remove numbers
     text = re.sub(r'\d+', '', text)
+
+    # 6. Remove punctuation
     text = text.translate(str.maketrans('', '', string.punctuation))
-    text = re.sub(r'\W+', ' ', text)
+
+    # 7. Collapse whitespace
     text = re.sub(r'\s+', ' ', text).strip()
-    return text
+
+    # 8. Tokenize
+    tokens = word_tokenize(text)
+
+    spell = SpellChecker()
+    tokens = [spell.correction(word) or word for word in tokens]
+
+    # 9. Remove stopwords
+    stop_words = set(stopwords.words('english'))
+    tokens = [word for word in tokens if word not in stop_words]
+
+    # 10. POS tag + Lemmatize
+    lemmatizer = WordNetLemmatizer()
+    pos_tags = pos_tag(tokens)
+    tokens = [lemmatizer.lemmatize(word, get_wordnet_pos(tag)) for word, tag in pos_tags]
+    return tokens
 
 
-corpus = []
-with open('catalog.json', 'r')as file:
+with open('catalog.json', 'r') as file:
     corpus = json.load(file)
 
 while True:
@@ -35,21 +81,6 @@ while True:
 
     user_input = input("Enter whatever you want to search from our database: ")
 
-    cleaned_user_input = clean_text(user_input)
-    print(f"Cleaned Input : {cleaned_user_input}")
-
-    tokenized_user_input = word_tokenize(cleaned_user_input)
-    print("Tokenized user input: ", tokenized_user_input)
-
-    stop_words = set(stopwords.words('english'))
-    filtered_user_input = [word for word in tokenized_user_input if word not in stop_words]
-    print("Stopword Removed Input: ", filtered_user_input)
-
-    stemmer = PorterStemmer()
-    stemmed_user_input = [stemmer.stem(word) for word in filtered_user_input]
-    print("Stemmed Input: ", stemmed_user_input)
-
-    
+    processed_tokens = preprocess(user_input)
+    print("Processed query tokens:", processed_tokens)
     break
-
-
